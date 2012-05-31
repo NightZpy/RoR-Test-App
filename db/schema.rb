@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(:version => 20120530213915) do
 
   create_table "products", :force => true do |t|
-    t.string   "title", , :length => 8
+    t.string   "title", :length => 8
     t.text     "description"
     t.string   "image_url"
     t.decimal  "price",       :precision => 8, :scale => 2
