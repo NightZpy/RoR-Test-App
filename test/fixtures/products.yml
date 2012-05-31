@@ -1,13 +1,28 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+  title: Ruby On Rails Practice
+  description: 
+    RoR is the prefered ruby framework for web development is a fast and
+    powerfull.
+  image_url: rails.png
+  price: 39.99
 
 two:
-  title: MyString
-  description: MyText
-  image_url: MyString
-  price: 9.99
+  title: Sinatra
+  description: 
+    Sinatra is a microframework based on Ruby Languaje very fast and 
+    versatille for web development and  api services development.
+  image_url: sinatra.png
+  price: 59.99
+
+#START:ruby
+ruby: 
+  title:       Programming Ruby 1.9
+  description: 
+    Ruby is the fastest growing and most exciting dynamic
+    language out there.  If you need to get working programs
+    delivered fast, you should add Ruby to your toolbox.
+  price:       0.0
+  image_url:   ruby.png 
+#END:ruby
