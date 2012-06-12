@@ -9,6 +9,7 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery
+  before_filter :authorize
   #skip_before_filter :verify_authenticity_token, :only => [:my_form_action]
   private
 
@@ -18,5 +19,13 @@ class ApplicationController < ActionController::Base
       cart = Cart.create
       session[:cart_id] = cart.id
       cart
+    end
+
+  protected
+
+    def authorize
+      unless User.find_by_id(session[:user_id])
+        redirect_to login_url, notice: "Please log in"
+      end      
     end
 end
