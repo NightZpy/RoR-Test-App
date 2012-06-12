@@ -13,4 +13,8 @@ module ApplicationHelper
 		end
 		content_tag("div", attributes, &block)		
 	end
+
+	#def protect_against_forgery?
+	#  false
+	#end	
 end

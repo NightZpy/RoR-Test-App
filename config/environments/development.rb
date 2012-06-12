@@ -24,6 +24,24 @@ Depot::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
+  # Set email send method to test for functional and unit testing
+  config.action_mailer.delivery_method = :test
+
+  # Set email send method to smtp with gmail server
+  exec = false
+  if exec
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "gmail.com",
+      authentication: "plain",
+      user_name: "nightzpy@gmail.com",
+      password: "p1a2u3l4",
+      enable_starttls_auto: true
+    }
+  end
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
 
@@ -42,4 +60,5 @@ Depot::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
 end

@@ -7,8 +7,9 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class ApplicationController < ActionController::Base
-  protect_from_forgery
 
+  protect_from_forgery
+  #skip_before_filter :verify_authenticity_token, :only => [:my_form_action]
   private
 
     def current_cart 

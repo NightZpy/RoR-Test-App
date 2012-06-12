@@ -3,7 +3,9 @@
 	<% else %>
 	<tr>
 	<% end %>
+		<% if @order.nil? %>
 		<td><%= button_to '+', line_items_path(product_id: line_item.product.id), remote: true %></td>
+		<% end %>
 		<!--<td><%= button_to '-', line_items_path(product_id: line_item.product), method: :delete, remote: true %></td>-->	
 		<td><%= line_item.quantity %>&times;</td>
 		<td><%= line_item.product.title %></td>
