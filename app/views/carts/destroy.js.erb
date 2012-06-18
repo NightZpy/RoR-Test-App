@@ -1,0 +1,6 @@
+$('#cart').hide('blind', 1000);
+$('#cart tr').each( function(){
+			if (!$(this).hasClass('total_line'))
+				$(this).remove();
+		}
+	);

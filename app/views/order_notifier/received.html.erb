@@ -1,0 +1,15 @@
+<% #protect_against_forgery? %>
+<h1>Dear <%= @order.name %></h1>
+
+<p>Thank you for your recent order from The Pragmatic Store.
+	
+	You ordered the following items:</p>
+
+<table>
+	<tr>
+		<th colspan="2">Qty</th><th>Description</th>
+	</tr>
+	<%= render @order.line_items %>
+</table>
+
+<p><em>We'll send you a separate e-mail when your order ships.</em></p>
